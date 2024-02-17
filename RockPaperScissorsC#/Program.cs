@@ -9,13 +9,16 @@ string[] battleItems = rules.BattleItems;
 
 int gameDestinyNum = gameDestiny.Next(3);
 
+int numberOfChoices = 3;
+
 logger.LogIntroduction();
 logger.LogChoices();
 
 string playerInput = Console.ReadLine();
 
 int choiceIndex;
-    if (int.TryParse(playerInput, out choiceIndex))
+
+    if (int.TryParse(playerInput, out choiceIndex) && choiceIndex < numberOfChoices)
     {
         string selectedChoice = battleItems[choiceIndex - 1];
         string computersChoice = battleItems[gameDestinyNum - 1];

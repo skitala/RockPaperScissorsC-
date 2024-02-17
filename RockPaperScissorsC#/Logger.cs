@@ -46,9 +46,9 @@ namespace RockPaperScissorsC_
         public void LogStart()
         {
         Console.WriteLine(gameStartText);
-        for(int i = 3; i > 0; i--)
+        for(int second = 3; second > 0; second--)
         {   
-            Console.WriteLine(i);
+            Console.WriteLine(second);
             Thread.Sleep(1000);
         }
         }
